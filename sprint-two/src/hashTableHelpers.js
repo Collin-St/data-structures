@@ -17,19 +17,27 @@ var LimitedArray = function(limit) {
   var limitedArray = {};
   limitedArray.get = function(index) {
     checkLimit(index);
+    //checks the index to make sure it's valid
+    //returns the limitedArray
     return storage[index];
+    //returns the value at the specific index in the storage array.
   };
   limitedArray.set = function(index, value) {
     checkLimit(index);
+    //checks the index to make sure it's valid
+    //returns the limitedArray 
     storage[index] = value;
+    //sets the value at the specific index in the storage array
   };
   limitedArray.each = function(callback) {
     for (var i = 0; i < storage.length; i++) {
+    //iterates through the storage at each element from start to end  
       callback(storage[i], i, storage);
     }
   };
 
   var checkLimit = function(index) {
+  //this makes sure that the index is a number and that limit > index
     if (typeof index !== 'number') {
       throw new Error('setter requires a numeric index for its first argument');
     }
