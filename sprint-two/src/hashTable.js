@@ -1,3 +1,8 @@
+// <<<<<<< HEAD
+// =======
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+
+// >>>>>>> a746dc4a6786b3424adb6730cc9f269277101b39
 var HashTable = function() {
   this._limit = 8;
   this._storage = LimitedArray(this._limit);

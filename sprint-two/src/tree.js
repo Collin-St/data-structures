@@ -4,7 +4,10 @@ var Tree = function(value) {
 
   newTree.children = []; 
   extend(newTree, treeMethods);
+// <<<<<<< HEAD
   //copies treeMethods into newTree
+// =======
+// >>>>>>> a746dc4a6786b3424adb6730cc9f269277101b39
   // console.log(newTree);
   return newTree;
 };

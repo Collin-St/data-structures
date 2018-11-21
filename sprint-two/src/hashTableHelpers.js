@@ -13,12 +13,13 @@
 
 var LimitedArray = function(limit) {
   var storage = [];
-
+  
   var limitedArray = {};
   limitedArray.get = function(index) {
     checkLimit(index);
     //checks the index to make sure it's valid
     //returns the limitedArray
+    // console.log(storage[index]);
     return storage[index];
     //returns the value at the specific index in the storage array.
   };
@@ -28,6 +29,7 @@ var LimitedArray = function(limit) {
     //returns the limitedArray 
     storage[index] = value;
     //sets the value at the specific index in the storage array
+    console.log(storage);
   };
   limitedArray.each = function(callback) {
     for (var i = 0; i < storage.length; i++) {
